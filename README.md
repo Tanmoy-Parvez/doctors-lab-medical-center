@@ -1,10 +1,10 @@
-# Getting Started with Create React App
+# Doctors Lab Medical Center
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+To visit the website [Click here](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## Descriptions:
 
 In the project directory, you can run:
 
--- `npm start`
+ **hello**
 
