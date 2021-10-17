@@ -25,7 +25,7 @@ const Footer = () => {
                 {/* Subscribe */}
                 <div className="col-md-5">
                     <h3 className="ms-5 ps-3">Subscribe:</h3>
-                    <div class="input-group w-75 mx-auto">
+                    <div className="input-group w-75 mx-auto">
                         <input type="text" className="form-control" placeholder="Enter your email address" />
                         <button className="btn btn-success" type="button">Send</button>
                     </div>

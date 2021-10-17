@@ -1,0 +1,44 @@
+[
+    {
+        "id": 101,
+        "title": "Cardiology",
+        "details": "Cardiology is the treatment of the heart and the blood vessels.",
+        "description": "Cardiology is the study and treatment of disorders of the heart and the blood vessels. A person with heart disease or cardiovascular disease may be referred to a cardiologist.",
+        "img": "https://www.pngkey.com/png/full/292-2922413_cardiology-heart-organ-heart.png"
+    },
+    {
+        "id": 102,
+        "title": "Eye Surgery",
+        "details": "Eye surgery, also known as ocular surgery.",
+        "description": "Eye surgery, also known as ocular surgery, is surgery performed on the eye or its adnexa, typically by an ophthalmologist. The eye is a very fragile organ, and requires extreme care before, during, and after a surgical procedure to minimise or prevent further damage.",
+        "img": "https://static.thenounproject.com/png/2450492-200.png"
+    },
+    {
+        "id": 103,
+        "title": "Ear Treatment",
+        "details": "Inner ear infection treatment usually involves medication to control symptoms",
+        "description": "Ear infection, an infection that occurs in the space behind the eardrum, is a common reason why your child sees a healthcare provider. Ear infections happen when bacteria or virus infect and trap fluid behind the eardrum, causing pain and swelling/bulging of the eardrum.",
+        "img": "https://pngimg.com/uploads/ear/ear_PNG35710.png"
+    },
+    {
+        "id": 104,
+        "title": "Blood Transfusion",
+        "details": "Blood transfusion is the process of transferring blood",
+        "description": "Blood transfusion is the process of transferring blood products into one circulation intravenously. Transfusions are used for various medical conditions to replace lost components of the blood",
+        "img": "http://cdn.onlinewebfonts.com/svg/img_43496.png"
+    },
+    {
+        "id": 105,
+        "title": "Dentistry",
+        "details": "Dentistry, also known as dental medicine and oral medicine",
+        "description": "Dentistry, also known as dental medicine and oral medicine, is a branch of medicine that consists of the study, diagnosis, prevention, and treatment of diseases, disorders, and conditions of the oral",
+        "img": "https://www.pinclipart.com/picdir/middle/556-5564175_tooth-teeth-dentist-dentistry-stomatology-teeth-icon-png.png"
+    },
+    {
+        "id": 106,
+        "title": "Microbiology Tests",
+        "details": "Microbiology laboratory tests use techniques to spot microorganisms.",
+        "description": "Microbiology laboratory tests use techniques to spot microorganisms like bacteria, fungi, parasites, and viruses.Microbiology Culture Tests. The following tests require the Label (T549). C Sticker. If you are preparing a micro-organism defined as an infectious",
+        "img": "https://cdn-icons-png.flaticon.com/512/2637/2637087.png"
+    }
+]
