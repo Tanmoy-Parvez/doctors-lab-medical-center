@@ -1,12 +1,30 @@
 import React from 'react';
+import { Card, CardGroup, Button, Row } from 'react-bootstrap';
 import useServices from '../../hooks/useServices'
 
 const Services = () => {
     const [services, setServices] = useServices();
-    console.log(services);
 
     return (
-        <div>
+        <div className="my-5 text-center">
+            <Row xs={1} md={3} className="g-4">
+                {
+                    services.map(service => <CardGroup>
+                        <Card>
+                            <Card.Img variant="top" src={service.img} height="220px" className="w-50 mx-auto" />
+                            <Card.Body>
+                                <Card.Title>
+                                    <h3>{service.title}</h3>
+                                </Card.Title>
+                                <Card.Text>
+                                    {service.details}
+                                </Card.Text>
+                                <Button variant="danger">Details</Button>
+                            </Card.Body>
+                        </Card>
+                    </CardGroup>)
+                }
+            </Row>
 
         </div>
     );
