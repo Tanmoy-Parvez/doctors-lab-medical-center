@@ -8,7 +8,7 @@ const NotFound = () => {
         history.push('/home')
     }
     return (
-        <div className="text-center my-5">
+        <div className="text-center marginTop mb-5">
             <div>
                 <img src={errorImg} alt="" />
             </div>
