@@ -1,31 +1,55 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useHistory, useLocation } from 'react-router-dom';
 import useAuth from '../../../hooks/useAuth';
 import logo from '../../../images/logo.png';
 
 
+
 const LogIn = () => {
-    const { user, googleSignIn } = useAuth();
+
+    const { user, googleSignIn, signInUser } = useAuth();
+
     const history = useHistory();
     const location = useLocation();
     const redirect_url = location.state?.from || '/home';
+
     const handleSignIn = () => {
         googleSignIn()
             .then((result) => {
                 history.push(redirect_url);
             })
-
     }
+
+    const [password, setPassword] = useState('');
+    const [email, setEmail] = useState('');
+
+    const handleEmail = e => {
+        setEmail(e.target.value);
+    }
+
+    const handlePassword = e => {
+        setPassword(e.target.value);
+    }
+
+    //handle submit form 
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        await signInUser(email, password)
+    }
+
+
     return (
         <div className="form text-center">
             <div className="container py-5">
                 <img src={logo} alt="" className="w-25" height="120" />
                 <div className="container w-75 mt-3">
                     <div className="bg-white w-50 mx-auto py-4 px-5 rounded-3">
-                        <form>
-                            <input type="email" placeholder="Enter Your Email" className="form-control  mx-auto" />
-                            <input type="password" placeholder="Enter Your Password" className="form-control mx-auto my-4" />
+                        <form onSubmit={handleSubmit}>
+                            <input onBlur={handleEmail} type="email" placeholder="Enter Your Email" className="form-control mx-auto" />
+
+                            <input onBlur={handlePassword} type="password" placeholder="Enter Your Password" className="form-control mx-auto my-4" />
+
                             <input type="submit" value="Sign in" className="mb-3 form-control bg-danger text-light" />
                         </form>
                         <p>New Here? <Link to="/register" className="text-danger">Create Account</Link></p>
