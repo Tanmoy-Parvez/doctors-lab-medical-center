@@ -8,14 +8,14 @@ const Footer = () => {
                 {/* location info */}
                 <div className="col-md-5">
                     <h4>
-                        <span className="text-success">Doctors Lab</span> Medical Center
+                        <span className="green-text">Doctors Lab</span> Medical Center
                     </h4>
                     <h6 className="fw-normal">AR Corner 2nd Floor, Pabna, Dhaka, Bangladesh.</h6>
                     <h6 className="fw-normal">Official: thctc@gmail.com</h6>
                     <h6 className="fw-normal">Helpline : +01700112233 (Available : 09:00am to 8:00pm)</h6>
                 </div>
                 {/* social medias */}
-                <div className="col-md-2 text-center">
+                <div className="col-md-2 text-center grey-text">
                     <h3>Social Links</h3>
                     <i className="fab fa-facebook-square fs-2 mt-3"></i>
                     <i className="fab fa-linkedin fs-2 mx-4"></i>
@@ -35,7 +35,7 @@ const Footer = () => {
             </div>
             <hr />
             {/* copyright */}
-            <p className="text-center">&copy; Copyright 2021 || All rights reserved by <span className="text-success">Doctors Lab</span> Medical Center </p>
+            <p className="text-center">&copy; Copyright 2021 || All rights reserved by <span className="green-text">Doctors Lab</span> Medical Center </p>
         </div>
     );
 };

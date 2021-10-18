@@ -32,7 +32,7 @@ const Header = () => {
                             className="d-inline-block align-top"
                             alt="React Bootstrap logo"
                         />
-                        <h3> <span className="green-text">Doctors Lab</span> Medical Center</h3>
+                        <h2 className="green-text fw-bold">Doctors Lab</h2>
                     </Navbar.Brand>
                     <Nav className="ms-auto">
                         <Nav.Item className="nav-item">
