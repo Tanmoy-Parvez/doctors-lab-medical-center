@@ -22,7 +22,7 @@ const Header = () => {
 
     return (
         <>
-            <Navbar variant="light">
+            <Navbar className="fixed-top bg-white">
                 <Container>
                     <Navbar.Brand className="d-flex" href="" onClick={handleNavbarBand}>
                         <img
@@ -32,7 +32,7 @@ const Header = () => {
                             className="d-inline-block align-top"
                             alt="React Bootstrap logo"
                         />
-                        <h2 className="green-text fw-bold">Doctors Lab</h2>
+                        <h2 className="text-danger fw-bold">Doctors Lab</h2>
                     </Navbar.Brand>
                     <Nav className="ms-auto">
                         <Nav.Item className="nav-item">
@@ -42,15 +42,15 @@ const Header = () => {
                                 <Link to="/contact">Contact Us</Link>
                             </Nav.Link>
                         </Nav.Item>
-                        {user?.email ? <Navbar.Text>
-                            Signed in as: <span className="fw-bold">{user?.displayName}</span>
+                        {user?.email ? <Nav.Item>
+                            <span className="fw-medium ms-4">Signed in as:</span> <span className="fw-bolder green-text">{user?.displayName}</span>
                             <Button onClick={logOut} variant="danger" className="mx-3 rounded-pill px-4">Log Out</Button>
-                        </Navbar.Text>
+                        </Nav.Item>
                             :
                             <div className="d-flex">
 
-                                <Button onClick={handleLogIn} variant="danger" className="mx-3 rounded-pill px-4">Login</Button>
-                                <Button onClick={handleSignUp} variant="danger" className="rounded-pill px-4">Sign up</Button>
+                                <button onClick={handleLogIn} className="mx-3 regular-btn rounded-pill px-4">Login</button>
+                                <button onClick={handleSignUp} className="regular-btn rounded-pill px-4">Sign up</button>
                             </div>
                         }
                     </Nav>

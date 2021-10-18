@@ -4,3 +4,7 @@
     color: gray;
     margin-left: 15px;
 }
+
+.nav-item a:hover{
+    color: #09cc84;
+}

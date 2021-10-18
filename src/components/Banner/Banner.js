@@ -7,7 +7,7 @@ import 'animate.css';
 
 const Banner = () => {
     return (
-        <div className="banner">
+        <div className="banner marginTop">
             <div className="row">
                 <div className="col-md-4">
                     <div className="mt-5">

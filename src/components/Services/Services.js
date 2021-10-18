@@ -9,7 +9,7 @@ const Services = () => {
 
     return (
         <div className="my-5 text-center">
-            <h1 className="my-5">Our Services</h1>
+            <h1 className="my-5">Our <span className="green-text">Services</span> </h1>
             <Row xs={1} md={3} className="g-4">
                 {
                     services.map(service => <CardGroup>

@@ -51,7 +51,7 @@ const Register = () => {
     }
 
     return (
-        <div className="form text-center">
+        <div className="form text-center mt-5">
             <div className="container py-5">
                 <img src={logo} alt="" className="w-25" height="120" />
                 <div className="container w-75 mt-3">
@@ -63,13 +63,13 @@ const Register = () => {
 
                             <input onBlur={handlePassword} type="password" placeholder="Enter Your Password" className="form-control mx-auto my-4" />
 
-                            <input type="submit" value="Sign Up" className="mb-3 form-control bg-danger text-light" />
+                            <input style={{ backgroundColor: "#09cc84" }} type="submit" value="Sign Up" className="mb-3 form-control  text-light" />
                         </form>
-                        <p>Already have an account? <Link to="/login" className="text-danger">Login</Link></p>
+                        <p>Already have an account? <Link to="/login" style={{ color: "#09cc84" }}>Login</Link></p>
 
                         --------------------- or ---------------------
 
-                        <button onClick={handleSignUp} className="btn btn-outline-secondary mt-3 form-control">
+                        <button onClick={handleSignUp} className="btn btn-outline-success mt-3 form-control">
                             <img src="https://img.icons8.com/color/48/000000/google-logo.png" alt="" width="25px" /> Google Sign Up</button>
                     </div>
                 </div>
