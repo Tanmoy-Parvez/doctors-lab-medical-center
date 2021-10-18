@@ -1,0 +1,8 @@
+.form{
+    background-image: url(../../../images/banner.jpg);
+    height: 650px;
+    background-position: center; 
+    background-repeat: no-repeat;
+    background-size: cover; 
+
+}

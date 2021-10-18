@@ -6,29 +6,39 @@ import Header from './components/Header/Header';
 import Home from './components/Home/Home';
 import Footer from './components/Footer/Footer';
 import ServiceDetails from './components/Services/ServiceDetails/ServiceDetails';
+import AuthProvider from './context/AuthProvider';
+import LogIn from './components/Authentication/LogIn/LogIn';
+import Register from './components/Authentication/Register/Register';
 
 function App() {
   return (
     <div className="App overflow-hidden">
-      <Router>
-        <Header />
-        <Switch>
-          <Route exact path="/">
-            <Home />
-          </Route>
-          <Route path="/home">
-            <Home />
-          </Route>
-          <Route path="/details/:serviceId">
-            <ServiceDetails />
-          </Route>
-
-          <Route path="*">
-            <NotFound />
-          </Route>
-        </Switch>
-        <Footer />
-      </Router>
+      <AuthProvider>
+        <Router>
+          <Header />
+          <Switch>
+            <Route exact path="/">
+              <Home />
+            </Route>
+            <Route path="/home">
+              <Home />
+            </Route>
+            <Route path="/details/:serviceId">
+              <ServiceDetails />
+            </Route>
+            <Route path="/login">
+              <LogIn />
+            </Route>
+            <Route path="/register">
+              <Register />
+            </Route>
+            <Route path="*">
+              <NotFound />
+            </Route>
+          </Switch>
+          <Footer />
+        </Router>
+      </AuthProvider>
     </div>
   );
 }
