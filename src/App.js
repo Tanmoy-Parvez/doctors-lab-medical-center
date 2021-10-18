@@ -10,6 +10,7 @@ import AuthProvider from './context/AuthProvider';
 import LogIn from './components/Authentication/LogIn/LogIn';
 import Register from './components/Authentication/Register/Register';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
+import ContactForm from './components/Contact/ContactForm';
 
 function App() {
   return (
@@ -23,6 +24,9 @@ function App() {
             </Route>
             <Route path="/home">
               <Home />
+            </Route>
+            <Route path="/contact">
+              <ContactForm />
             </Route>
             <PrivateRoute path="/details/:serviceId">
               <ServiceDetails />

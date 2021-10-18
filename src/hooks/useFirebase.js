@@ -45,26 +45,23 @@ const useFirebase = () => {
 
     //sign up with email and password
     const signUpUser = (email, password, name) => {
-        createUserWithEmailAndPassword(auth, email, password)
-            .then((res) => {
-                setUser(res.user)
-                updateProfile(auth.currentUser, {
-                    displayName: name,
-                })
-
-            })
+        setLoading(true)
+        return createUserWithEmailAndPassword(auth, email, password)
             .catch((error) => {
                 setError(error.message);
             })
+            .finally(() => setLoading(false));
     }
 
 
     //sign in with email & password
     const signInUser = (email, password) => {
+        setLoading(true)
         return signInWithEmailAndPassword(auth, email, password)
             .catch((error) => {
                 setError(error);
             })
+            .finally(() => setLoading(false));
     }
 
     return {

@@ -1,0 +1,6 @@
+.nav-item a{
+    text-decoration: none;
+    font-weight: bold;
+    color: gray;
+    margin-left: 15px;
+}

@@ -4,9 +4,12 @@ import { Link } from 'react-router-dom';
 import useAuth from '../../../hooks/useAuth';
 import { useHistory, useLocation } from 'react-router-dom';
 import logo from '../../../images/logo.png';
+import { getAuth, updateProfile } from "firebase/auth";
 
 const Register = () => {
-    const { user, googleSignIn, signUpUser } = useAuth();
+    const auth = getAuth();
+
+    const { user, googleSignIn, signUpUser, error } = useAuth();
 
     const history = useHistory();
     const location = useLocation();
@@ -14,7 +17,7 @@ const Register = () => {
 
     const handleSignUp = () => {
         googleSignIn()
-            .then((result) => {
+            .then(() => {
                 history.push(redirect_url);
             })
 
@@ -36,9 +39,15 @@ const Register = () => {
         setPassword(e.target.value);
     }
 
-    const handleSubmit = async (e) => {
+    const handleSubmit = (e) => {
         e.preventDefault();
-        await signUpUser(email, password, name)
+        signUpUser(email, password, name)
+            .then(() => {
+                history.push(redirect_url);
+                updateProfile(auth.currentUser, {
+                    displayName: name,
+                })
+            })
     }
 
     return (
@@ -64,6 +73,7 @@ const Register = () => {
                             <img src="https://img.icons8.com/color/48/000000/google-logo.png" alt="" width="25px" /> Google Sign Up</button>
                     </div>
                 </div>
+                {error}
             </div >
         </div >
     );
