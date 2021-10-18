@@ -11,6 +11,7 @@ import LogIn from './components/Authentication/LogIn/LogIn';
 import Register from './components/Authentication/Register/Register';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 import ContactForm from './components/Contact/ContactForm';
+import Doctors from './components/Doctors/Doctors';
 
 function App() {
   return (
@@ -27,6 +28,9 @@ function App() {
             </Route>
             <Route path="/contact">
               <ContactForm />
+            </Route>
+            <Route path="/doctors">
+              <Doctors />
             </Route>
             <PrivateRoute path="/details/:serviceId">
               <ServiceDetails />
