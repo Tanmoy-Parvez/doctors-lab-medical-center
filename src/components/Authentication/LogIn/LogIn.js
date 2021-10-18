@@ -36,6 +36,9 @@ const LogIn = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         await signInUser(email, password)
+            .then((result) => {
+                history.push(redirect_url);
+            })
     }
 
 
