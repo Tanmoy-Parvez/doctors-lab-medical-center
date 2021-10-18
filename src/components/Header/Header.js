@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container, Nav, Navbar, Button } from 'react-bootstrap';
-import logo from '../../images/logo.png';
+import logo from '../../images/logo2.png';
 import { useHistory } from 'react-router';
 import useAuth from '../../hooks/useAuth';
 import { Link } from 'react-router-dom';
@@ -27,12 +27,12 @@ const Header = () => {
                     <Navbar.Brand className="d-flex" href="" onClick={handleNavbarBand}>
                         <img
                             src={logo}
-                            width="130"
+                            width="70"
                             height="40"
                             className="d-inline-block align-top"
                             alt="React Bootstrap logo"
                         />
-                        <h2 className="text-danger fw-bold">Doctors Lab</h2>
+                        <h2 className="green-text fw-bold ms-1">Doctors Lab</h2>
                     </Navbar.Brand>
                     <Nav className="ms-auto">
                         <Nav.Item className="nav-item">

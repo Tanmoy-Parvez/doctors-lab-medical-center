@@ -3,14 +3,15 @@ import doctor1 from '../../images/doctors-image/doctor-mike.jpg';
 import doctor2 from '../../images/doctors-image/doctor-denial.jpg';
 import doctor3 from '../../images/doctors-image/doctor-ema.jpg';
 import doctor4 from '../../images/doctors-image/john son-6.jpg';
+import { Link } from 'react-router-dom';
 
 const Doctors = () => {
     return (
         <div className="text-center marginTop">
-            <h1 className="my-5">Our Expert <span className="green-text">Doctors</span> </h1>
+            <h1 className="my-5 animate__animated animate__slideInDown">Our Expert <span className="green-text">Doctors</span> </h1>
             <div className="container">
                 <div className="row row-cols-1 row-cols-md-4 g-4 mt-3">
-                    <div className="col">
+                    <div className="col animate__animated animate__slideInUp">
                         <div className="card h-100">
                             <img src={doctor1} className="card-img-top p-2" alt="..." />
                             <div className="card-body text-center">
@@ -25,7 +26,7 @@ const Doctors = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="col">
+                    <div className="col animate__animated animate__slideInUp">
                         <div className="card h-100">
                             <img src={doctor2} className="card-img-top p-2" alt="..." />
                             <div className="card-body text-center">
@@ -40,7 +41,7 @@ const Doctors = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="col">
+                    <div className="col animate__animated animate__slideInUp">
                         <div className="card h-100">
                             <img src={doctor3} className="card-img-top p-2" alt="..." />
                             <div className="card-body text-center">
@@ -55,7 +56,7 @@ const Doctors = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="col">
+                    <div className="col animate__animated animate__slideInUp">
                         <div className="card h-100">
                             <img src={doctor4} className="card-img-top p-2" alt="..." />
                             <div className="card-body text-center">
@@ -78,7 +79,9 @@ const Doctors = () => {
                         <h1 className="fw-bolder">Don't waste your time, call: +123-789-9877</h1>
                     </div>
                     <div className="col-md-3">
-                        <button className="btn btn-light fw-medium rounded-pill d-flex align-items-center">Contact Us <i className="fas fa-arrow-alt-circle-right green-text fs-2 ms-2"></i></button>
+                        <Link to="/contact">
+                            <button className="btn btn-light fw-medium rounded-pill d-flex align-items-center">Contact Us <i className="fas fa-arrow-alt-circle-right green-text fs-2 ms-2"></i></button>
+                        </Link>
                     </div>
                 </div>
             </div>
