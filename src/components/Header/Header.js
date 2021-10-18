@@ -14,7 +14,7 @@ const Header = () => {
         history.push("/login")
     }
     const handleSignUp = () => {
-        history.push("/register")
+        history.push("/signup")
     }
     const handleNavbarBand = () => {
         history.push("/home")
@@ -49,7 +49,7 @@ const Header = () => {
                             :
                             <div className="d-flex">
 
-                                <button onClick={handleLogIn} className="mx-3 regular-btn rounded-pill px-4">Login</button>
+                                <button onClick={handleLogIn} className="mx-3 regular-btn rounded-pill px-4">Sign in</button>
                                 <button onClick={handleSignUp} className="regular-btn rounded-pill px-4">Sign up</button>
                             </div>
                         }

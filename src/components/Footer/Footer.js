@@ -10,8 +10,8 @@ const Footer = () => {
                     <h4>
                         <span className="green-text">Doctors Lab</span> Medical Center
                     </h4>
-                    <h6 className="fw-normal">AR Corner 2nd Floor, Pabna, Dhaka, Bangladesh.</h6>
-                    <h6 className="fw-normal">Official: thctc@gmail.com</h6>
+                    <h6 className="fw-normal">Khan Tower 2nd Floor, Pabna, Dhaka, Bangladesh.</h6>
+                    <h6 className="fw-normal">Official: dlmc@gmail.com</h6>
                     <h6 className="fw-normal">Helpline : +01700112233 (Available : 09:00am to 8:00pm)</h6>
                 </div>
                 {/* social medias */}

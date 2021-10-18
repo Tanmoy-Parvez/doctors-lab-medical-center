@@ -8,7 +8,7 @@ import Footer from './components/Footer/Footer';
 import ServiceDetails from './components/Services/ServiceDetails/ServiceDetails';
 import AuthProvider from './context/AuthProvider';
 import LogIn from './components/Authentication/LogIn/LogIn';
-import Register from './components/Authentication/Register/Register';
+import SignUp from './components/Authentication/SignUp/SignUp';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 import ContactForm from './components/Contact/ContactForm';
 import Doctors from './components/Doctors/Doctors';
@@ -42,8 +42,8 @@ function App() {
             <Route path="/login">
               <LogIn />
             </Route>
-            <Route path="/register">
-              <Register />
+            <Route path="/signup">
+              <SignUp />
             </Route>
             <Route path="*">
               <NotFound />

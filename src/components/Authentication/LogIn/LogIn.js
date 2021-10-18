@@ -55,7 +55,7 @@ const LogIn = () => {
 
                             <input style={{ backgroundColor: "#09cc84" }} type="submit" value="Sign in" className="mb-3 form-control  text-light" />
                         </form>
-                        <p>New Here? <Link to="/register" style={{ color: "#09cc84" }}>Create Account</Link></p>
+                        <p>New Here? <Link to="/SignUp" style={{ color: "#09cc84" }}>Create Account</Link></p>
 
                         --------------------- or ---------------------
 

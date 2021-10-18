@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
-import './Register.css'
+import './SignUp.css'
 import { Link } from 'react-router-dom';
 import useAuth from '../../../hooks/useAuth';
 import { useHistory, useLocation } from 'react-router-dom';
 import logo from '../../../images/logo.png';
 import { getAuth, updateProfile } from "firebase/auth";
 
-const Register = () => {
+const SignUp = () => {
     const auth = getAuth();
 
     const { user, googleSignIn, signUpUser, error } = useAuth();
@@ -79,4 +79,4 @@ const Register = () => {
     );
 };
 
-export default Register;
+export default SignUp;
