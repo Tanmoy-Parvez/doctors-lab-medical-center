@@ -1,26 +1,26 @@
 import React from 'react';
 import { Container, Nav, Navbar, Button } from 'react-bootstrap';
 import logo from '../../images/logo.png';
-// import useAuth from '../../../hooks/useAuth';
-// import { useHistory } from 'react-router';
+import useAuth from '../../../hooks/useAuth';
+import { useHistory } from 'react-router';
 
 const Header = () => {
-    // const { user, logOut } = useAuth();
-    // const history = useHistory();
+    const { user, logOut } = useAuth();
+    const history = useHistory();
 
-    // const handleLogIn = () => {
-    //     history.push("/login")
-    // }
-    // const handleSignUp = () => {
-    //     history.push("/register")
-    // }
+    const handleLogIn = () => {
+        history.push("/login")
+    }
+    const handleSignUp = () => {
+        history.push("/register")
+    }
 
-    // const handleShipping = () => {
-    //     history.push("/shipping")
-    // }
-    // const handleNavbarBand = () => {
-    //     history.push("/home")
-    // }
+    const handleShipping = () => {
+        history.push("/shipping")
+    }
+    const handleNavbarBand = () => {
+        history.push("/home")
+    }
 
     return (
         <>
