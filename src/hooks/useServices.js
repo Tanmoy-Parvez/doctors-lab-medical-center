@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 
+// fetching fake date
 const useServices = () => {
     const [services, setServices] = useState([]);
     useEffect(() => {

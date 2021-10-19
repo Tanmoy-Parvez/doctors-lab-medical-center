@@ -5,12 +5,14 @@ import useAuth from '../../hooks/useAuth';
 
 
 const PrivateRoute = ({ children, ...rest }) => {
-    const { user, isLoading } = useAuth();
+    const { user, isLoading } = useAuth(); // context api
+    // loading spinner
     if (isLoading) {
         return <div className="text-center my-5">
             <Spinner animation="border" variant="primary" />
         </div>
     }
+    // private or protected route function
     return (
         <Route
             {...rest}

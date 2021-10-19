@@ -5,6 +5,7 @@ import Gallery from '../Gallery/Gallery';
 import Services from '../Services/Services';
 
 const Home = () => {
+    // home section that contain other components
     return (
         <div>
             <Banner />

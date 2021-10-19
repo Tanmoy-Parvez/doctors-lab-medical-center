@@ -5,6 +5,7 @@ import img3 from '../../images/gallery/pic3.jpg'
 import img4 from '../../images/gallery/pic4.jpg'
 
 const Gallery = () => {
+    // gallery section
     return (
         <div className="container text-center my-5 px-3">
             <h1 className="mb-5">Our <span className="green-text">Gallery</span> </h1>

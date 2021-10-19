@@ -5,8 +5,9 @@ import useServices from '../../hooks/useServices';
 import './Services.css'
 
 const Services = () => {
-    const [services, setServices] = useServices();
+    const [services, setServices] = useServices(); // use custom hook for data
 
+    // services section
     return (
         <div className="bg-light my-5 py-5">
             <div className="text-center container">

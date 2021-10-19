@@ -27,6 +27,7 @@ const Footer = () => {
                 <div className="col-md-2 col-12 my-4 px-5">
                     <img src={logo} className="img-fluid" alt="" />
                 </div>
+                {/* some links */}
                 <div className="col-md-3 col-12 my-4 nav-item ps-5">
                     <p>
                         <Link to="/home">Home</Link>

@@ -1,12 +1,13 @@
+/* header banner style */
 .banner{
     background-image: url(../../images/banner2.jpg);
     height: 485px;
     background-position: center; 
     background-repeat: no-repeat;
     background-size: cover; 
-
 }
 
+/* style for responsive */
 @media only screen and (max-width:768px){
     .banner{
         background-image: none;

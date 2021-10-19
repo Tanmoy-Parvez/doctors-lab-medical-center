@@ -1,9 +1,10 @@
+/* form body style */
 .form-body{
     width: 30%;
     padding: 15px 20px;
     background-color: white;
 }
-
+/* style for responsive */
 @media only screen and (max-width:768px) {
     .form-body{
         width: 90%;

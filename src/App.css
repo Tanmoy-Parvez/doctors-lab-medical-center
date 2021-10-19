@@ -1,10 +1,11 @@
+/* google font  */
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-
 
 *{
     font-family: 'Roboto', sans-serif;
 }
 
+/* normal button style */
 .regular-btn{
     outline: none;
     border: none;
@@ -19,13 +20,14 @@
     background-color: #d42708; 
 }
 
+/* text color */
 .green-text{
     color: #09cc84;
 }
 .grey-text{
     color: lightgrey;
 }
-
+/* extra margin for top  */
 .marginTop {
     margin-top: 100px;
 }

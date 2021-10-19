@@ -15,6 +15,7 @@ import Doctors from './components/Doctors/Doctors';
 import AppointmentMsg from './components/AppointmentMsg/AppointmentMsg';
 
 function App() {
+  // main component and all routes
   return (
     <div className="App overflow-hidden">
       <AuthProvider>

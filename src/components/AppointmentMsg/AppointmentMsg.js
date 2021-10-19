@@ -1,6 +1,7 @@
 import React from 'react';
 
 const AppointmentMsg = () => {
+    // appointment message section on services detail button
     return (
         <div className="banner text-center py-5">
             <div className="container animate__animated animate__bounceIn">

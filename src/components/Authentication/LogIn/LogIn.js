@@ -8,13 +8,15 @@ import './LogIn.css'
 
 
 const LogIn = () => {
+    // use context api
+    const { googleSignIn, signInUser } = useAuth();
 
-    const { user, googleSignIn, signInUser } = useAuth();
-
+    // direct access
     const history = useHistory();
     const location = useLocation();
     const redirect_url = location.state?.from || '/home';
 
+    // handle google sign
     const handleSignIn = () => {
         googleSignIn()
             .then((result) => {
@@ -22,13 +24,16 @@ const LogIn = () => {
             })
     }
 
+    //set input values 
     const [password, setPassword] = useState('');
     const [email, setEmail] = useState('');
 
+    // get input value from email field
     const handleEmail = e => {
         setEmail(e.target.value);
     }
 
+    // get input value from password field
     const handlePassword = e => {
         setPassword(e.target.value);
     }
@@ -42,7 +47,7 @@ const LogIn = () => {
             })
     }
 
-
+    // sign in or log in section
     return (
         <div className="form-banner text-center mt-5">
             <div className="py-5">
@@ -58,12 +63,12 @@ const LogIn = () => {
                     <p>New Here? <Link to="/SignUp" style={{ color: "#09cc84" }}>Create Account</Link></p>
 
                     --------------------- or ---------------------
-
+                    {/* google sign in button */}
                     <button onClick={handleSignIn} className="btn btn-outline-success mt-3 form-control">
                         <img src="https://img.icons8.com/color/48/000000/google-logo.png" alt="" width="25px" /> Google Sign In</button>
                 </div>
-            </div >
-        </div >
+            </div>
+        </div>
     );
 };
 

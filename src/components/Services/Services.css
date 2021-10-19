@@ -1,7 +1,9 @@
+/* link style */
 a{
     text-decoration: none;
 }
 
+/* card hover style */
 .card-item:hover{
     background-color: rgba(241, 237, 237, 0.308);
     border: 1px solid #09cc84;

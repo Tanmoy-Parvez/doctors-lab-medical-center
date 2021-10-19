@@ -2,6 +2,7 @@ import React from 'react';
 import "./ContactForm.css"
 
 const ContactForm = () => {
+    // contact us form section
     return (
         <div className="contact-banner pt-2 mt-5">
             <div className="row my-5 px-5">
@@ -10,7 +11,7 @@ const ContactForm = () => {
                         <h1 className="fw-bolder"> <span className="green-text">We Love</span> To Hear From</h1>
                         <h1 className="fw-bolder">Our Patients</h1>
                     </div>
-
+                    {/* details */}
                     <div className="row">
                         <div className="col-md-12 d-flex align-items-center border-bottom py-3">
                             <i className="fas fa-phone-alt green-text fs-1 me-5"></i>
@@ -37,6 +38,7 @@ const ContactForm = () => {
                         </div>
                     </div>
                 </div>
+                {/* form */}
                 <div className="col-md-6 col-12 pb-5 mb-5 animate__animated animate__lightSpeedInRight">
                     <div className="d-flex row">
                         <div className="col-md-6 col-12 mb-2 mt-2">

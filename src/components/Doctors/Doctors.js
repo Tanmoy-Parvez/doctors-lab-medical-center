@@ -7,11 +7,13 @@ import { Link } from 'react-router-dom';
 import "./Doctors.css"
 
 const Doctors = () => {
+    // doctors section
     return (
         <div className="text-center marginTop">
             <h1 className="my-5 animate__animated animate__slideInDown">Our Expert <span className="green-text">Doctors</span> </h1>
             <div className="container">
                 <div className="row row-cols-1 row-cols-md-4 g-4 mt-3">
+                    {/* card-1 */}
                     <div className="col animate__animated animate__slideInUp">
                         <div className="card h-100 doctor-card">
                             <img src={doctor1} className="card-img-top p-2" alt="..." />
@@ -27,6 +29,7 @@ const Doctors = () => {
                             </div>
                         </div>
                     </div>
+                    {/* card-2 */}
                     <div className="col animate__animated animate__slideInUp">
                         <div className="card h-100 doctor-card">
                             <img src={doctor2} className="card-img-top p-2" alt="..." />
@@ -42,6 +45,7 @@ const Doctors = () => {
                             </div>
                         </div>
                     </div>
+                    {/* card-3 */}
                     <div className="col animate__animated animate__slideInUp">
                         <div className="card h-100 doctor-card">
                             <img src={doctor3} className="card-img-top p-2" alt="..." />
@@ -57,6 +61,7 @@ const Doctors = () => {
                             </div>
                         </div>
                     </div>
+                    {/* card-3 */}
                     <div className="col animate__animated animate__slideInUp">
                         <div className="card h-100 doctor-card">
                             <img src={doctor4} className="card-img-top p-2" alt="..." />
@@ -74,6 +79,7 @@ const Doctors = () => {
                     </div>
                 </div>
             </div>
+            {/* extra info box */}
             <div>
                 <div style={{ backgroundColor: "#09cc84" }} className="row py-4 mt-5 d-flex align-items-center justify-content-center">
                     <div className="col-md-9 col-12 text-white">

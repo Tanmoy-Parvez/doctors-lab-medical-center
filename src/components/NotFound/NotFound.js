@@ -4,9 +4,12 @@ import errorImg from '../../images/404-png.png'
 
 const NotFound = () => {
     const history = useHistory();
+
+    // back to home function
     const handleGoToHome = () => {
         history.push('/home')
     }
+    // not found page
     return (
         <div className="text-center marginTop mb-5 px-5">
             <div>

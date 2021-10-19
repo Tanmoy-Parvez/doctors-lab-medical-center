@@ -7,23 +7,27 @@ import { Link } from 'react-router-dom';
 import "./Header.css"
 
 const Header = () => {
-    const { user, logOut } = useAuth();
+    const { user, logOut } = useAuth(); // context api
     const history = useHistory();
 
+    // change route options
     const handleLogIn = () => {
         history.push("/login")
     }
+
     const handleSignUp = () => {
         history.push("/signup")
     }
+
     const handleNavbarBand = () => {
         history.push("/home")
     }
-
+    // navigation menu bar
     return (
         <>
             <Navbar collapseOnSelect expand="lg" className="fixed-top bg-white">
                 <Container>
+                    {/* logo and title */}
                     <Navbar.Brand className="d-flex" href="" onClick={handleNavbarBand}>
                         <img
                             src={logo}
@@ -34,6 +38,7 @@ const Header = () => {
                         />
                         <h2 className="green-text fw-bold ms-1">Doctors Lab</h2>
                     </Navbar.Brand>
+                    {/* menu options */}
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="ms-auto navbar-item">
@@ -45,14 +50,13 @@ const Header = () => {
                                 </Nav.Link>
                             </Nav.Item>
                             {user?.email ?
+                                // toggle buttons
                                 <Nav.Item>
                                     <span className="fw-medium ms-4 navbar-item">Signed in as:</span> <span className="fw-bolder green-text">{user.displayName}</span>
                                     <Button onClick={logOut} variant="danger" className="mx-3 rounded-pill px-4 ">Log Out</Button>
                                 </Nav.Item>
-
                                 :
                                 <div className="d-flex">
-
                                     <button onClick={handleLogIn} className="mx-3 regular-btn rounded-pill px-4">Sign in</button>
                                     <button onClick={handleSignUp} className="regular-btn rounded-pill px-4">Sign up</button>
                                 </div>

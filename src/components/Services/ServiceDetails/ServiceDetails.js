@@ -4,12 +4,16 @@ import useServices from '../../../hooks/useServices';
 
 const ServiceDetails = () => {
     const { serviceId } = useParams();
-    const [services, setServices] = useServices();
-    const service = services.find(serviceItem => serviceItem.id === parseInt(serviceId))
 
+    // find the specific service component
+    const [services, setServices] = useServices();
+    const service = services.find(serviceItem => serviceItem.id === parseInt(serviceId));
+
+    // custom style
     const myStyle = {
         textAlign: 'justify',
     }
+    // service details section
     return (
         <div className="container marginTop animate__animated animate__slideInRight">
             <div className="row d-flex align-items-center my-5">
