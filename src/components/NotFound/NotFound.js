@@ -8,9 +8,9 @@ const NotFound = () => {
         history.push('/home')
     }
     return (
-        <div className="text-center marginTop mb-5">
+        <div className="text-center marginTop mb-5 px-5">
             <div>
-                <img src={errorImg} alt="" />
+                <img src={errorImg} className="img-fluid" alt="" />
             </div>
             <button onClick={handleGoToHome} className="btn btn-dark mt-5">Back To Home</button>
         </div>

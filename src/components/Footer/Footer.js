@@ -8,7 +8,7 @@ const Footer = () => {
         <div className="footer-container bg-dark text-light p-4 pt-5">
             <div className="row">
                 {/* location info */}
-                <div className="col-md-4">
+                <div className="col-md-4 col-12 my-4">
                     <h4>
                         <span className="green-text">Doctors Lab</span> Medical Center
                     </h4>
@@ -17,14 +17,17 @@ const Footer = () => {
                     <h6 className="fw-normal">Helpline : +01700112233 (Available : 09:00am to 8:00pm)</h6>
                 </div>
                 {/* social medias */}
-                <div className="col-md-3 text-center grey-text">
+                <div className="col-md-3 col-12 my-4 text-center grey-text">
                     <h3>Social Links</h3>
                     <i className="fab fa-facebook-square fs-2 mt-3"></i>
                     <i className="fab fa-linkedin fs-2 mx-4"></i>
                     <i className="fab fa-twitter-square fs-2"></i>
                     <i className="fab fa-whatsapp-square fs-2 ms-4"></i>
                 </div>
-                <div className="col-md-3 nav-item ps-5">
+                <div className="col-md-2 col-12 my-4 px-5">
+                    <img src={logo} className="img-fluid" alt="" />
+                </div>
+                <div className="col-md-3 col-12 my-4 nav-item ps-5">
                     <p>
                         <Link to="/home">Home</Link>
                     </p>
@@ -34,9 +37,6 @@ const Footer = () => {
                     <p>
                         <Link to="/contact">Contact Us</Link>
                     </p>
-                </div>
-                <div className="col-md-2">
-                    <img src={logo} className="img-fluid w-75" alt="" />
                 </div>
             </div>
             <hr />
