@@ -1,7 +1,8 @@
 # Doctors Lab Medical Center
 
 ## Descriptions:
-<p>This site a</p>
+
+<p>This site is about a medical center which name is Doctors Lab.From this site a visitor can get all the info about that medical center.You can get all the important information about their services or treatments about their expert doctors or much more.</p>
 
 To visit the website [Click here](https://doctors-lab-medical-center-21.web.app/).
 
