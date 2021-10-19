@@ -43,7 +43,7 @@ const Header = () => {
                             </Nav.Link>
                         </Nav.Item>
                         {user?.email ? <Nav.Item>
-                            <span className="fw-medium ms-4">Signed in as:</span> <span className="fw-bolder green-text">{user?.displayName}</span>
+                            <span className="fw-medium ms-4">Signed in as:</span> <span className="fw-bolder green-text">{user.displayName}</span>
                             <Button onClick={logOut} variant="danger" className="mx-3 rounded-pill px-4">Log Out</Button>
                         </Nav.Item>
                             :

@@ -49,9 +49,6 @@ const SignUp = () => {
                 })
             })
     }
-    const loadPage = () => {
-        window.reload();
-    }
 
     return (
         <div className="form text-center mt-5">
@@ -66,7 +63,7 @@ const SignUp = () => {
 
                             <input onBlur={handlePassword} type="password" placeholder="Enter Your Password" className="form-control mx-auto my-4" required />
 
-                            <input onClick={loadPage} style={{ backgroundColor: "#09cc84" }} type="submit" value="Sign Up" className="mb-3 form-control  text-light" />
+                            <input style={{ backgroundColor: "#09cc84" }} type="submit" value="Sign Up" className="mb-3 form-control  text-light" />
                         </form>
                         <p>Already have an account? <Link to="/login" style={{ color: "#09cc84" }}>Login</Link></p>
 
