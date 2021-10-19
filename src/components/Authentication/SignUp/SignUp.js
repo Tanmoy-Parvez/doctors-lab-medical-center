@@ -44,6 +44,7 @@ const SignUp = () => {
         signUpUser(email, password, name)
             .then(() => {
                 history.push(redirect_url);
+                window.location.reload();
                 updateProfile(auth.currentUser, {
                     displayName: name,
                 })

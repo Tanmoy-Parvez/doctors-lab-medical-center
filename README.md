@@ -1,10 +1,16 @@
 # Doctors Lab Medical Center
 
-To visit the website [Click here](https://github.com/facebook/create-react-app).
+To visit the website [Click here](https://doctors-lab-medical-center-21.web.app/).
 
 ## Descriptions:
 
-In the project directory, you can run:
+Little bit description about our website:
 
- **hello**
+ <ul>
+    <li>In this site we represents our medical center</li>
+    <li>I use firebase for user authentication</li>
+    <li>I put some routes protected or private</li>
+    <li>Only a logged in user is allowed to visit private routes</li>
+    <li>I use some css liba</li>
+ </ul>
 
