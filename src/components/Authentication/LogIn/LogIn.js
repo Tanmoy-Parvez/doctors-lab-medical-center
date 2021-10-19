@@ -49,11 +49,11 @@ const LogIn = () => {
                 <div className="container w-75 mt-3">
                     <div className="bg-white w-50 mx-auto py-4 px-5 rounded-3">
                         <form onSubmit={handleSubmit}>
-                            <input onBlur={handleEmail} type="email" placeholder="Enter Your Email" className="form-control mx-auto" />
+                            <input onBlur={handleEmail} type="email" placeholder="Enter Your Email" className="form-control mx-auto" required />
 
-                            <input onBlur={handlePassword} type="password" placeholder="Enter Your Password" className="form-control mx-auto my-4" />
+                            <input onBlur={handlePassword} type="password" placeholder="Enter Your Password" className="form-control mx-auto my-4" required />
 
-                            <input style={{ backgroundColor: "#09cc84" }} type="submit" value="Sign in" className="mb-3 form-control  text-light" />
+                            <input style={{ backgroundColor: "#09cc84" }} type="submit" value="Sign in" className="mb-3 form-control text-light" />
                         </form>
                         <p>New Here? <Link to="/SignUp" style={{ color: "#09cc84" }}>Create Account</Link></p>
 

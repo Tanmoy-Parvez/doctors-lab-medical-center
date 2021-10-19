@@ -73,10 +73,7 @@ const useFirebase = () => {
         logOut,
         isLoading,
     };
-
-
 }
-
 
 
 export default useFirebase;

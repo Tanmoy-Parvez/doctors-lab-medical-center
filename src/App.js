@@ -27,9 +27,9 @@ function App() {
             <Route path="/home">
               <Home />
             </Route>
-            <Route path="/contact">
+            <PrivateRoute path="/contact">
               <ContactForm />
-            </Route>
+            </PrivateRoute>
             <Route path="/appointment">
               <AppointmentMsg />
             </Route>

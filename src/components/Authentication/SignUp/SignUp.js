@@ -9,7 +9,7 @@ import { getAuth, updateProfile } from "firebase/auth";
 const SignUp = () => {
     const auth = getAuth();
 
-    const { user, googleSignIn, signUpUser, error } = useAuth();
+    const { user, googleSignIn, signUpUser } = useAuth();
 
     const history = useHistory();
     const location = useLocation();
@@ -49,6 +49,9 @@ const SignUp = () => {
                 })
             })
     }
+    const loadPage = () => {
+        window.reload();
+    }
 
     return (
         <div className="form text-center mt-5">
@@ -57,13 +60,13 @@ const SignUp = () => {
                 <div className="container w-75 mt-3">
                     <div className="bg-white w-50 mx-auto py-4 px-5 rounded-3">
                         <form onSubmit={handleSubmit}>
-                            <input onBlur={handleName} type="text" placeholder="Enter Your Name" className="form-control  mx-auto mb-4" />
+                            <input onBlur={handleName} type="text" placeholder="Enter Your Name" className="form-control  mx-auto mb-4" required />
 
-                            <input onBlur={handleEmail} type="email" placeholder="Enter Your Email" className="form-control  mx-auto" />
+                            <input onBlur={handleEmail} type="email" placeholder="Enter Your Email" className="form-control mx-auto" required />
 
-                            <input onBlur={handlePassword} type="password" placeholder="Enter Your Password" className="form-control mx-auto my-4" />
+                            <input onBlur={handlePassword} type="password" placeholder="Enter Your Password" className="form-control mx-auto my-4" required />
 
-                            <input style={{ backgroundColor: "#09cc84" }} type="submit" value="Sign Up" className="mb-3 form-control  text-light" />
+                            <input onClick={loadPage} style={{ backgroundColor: "#09cc84" }} type="submit" value="Sign Up" className="mb-3 form-control  text-light" />
                         </form>
                         <p>Already have an account? <Link to="/login" style={{ color: "#09cc84" }}>Login</Link></p>
 
@@ -73,7 +76,6 @@ const SignUp = () => {
                             <img src="https://img.icons8.com/color/48/000000/google-logo.png" alt="" width="25px" /> Google Sign Up</button>
                     </div>
                 </div>
-                {error}
             </div >
         </div >
     );
