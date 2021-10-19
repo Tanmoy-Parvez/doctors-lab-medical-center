@@ -10,6 +10,7 @@ import './LogIn.css'
 const LogIn = () => {
     // use context api
     const { googleSignIn, signInUser } = useAuth();
+    const [error, setError] = useState('');
 
     // direct access
     const history = useHistory();
@@ -45,6 +46,9 @@ const LogIn = () => {
             .then((result) => {
                 history.push(redirect_url);
             })
+            .catch((error) => {
+                setError("Incorrect email or password! Try again")
+            })
     }
 
     // sign in or log in section
@@ -59,6 +63,7 @@ const LogIn = () => {
                         <input onBlur={handlePassword} type="password" placeholder="Enter Your Password" className="form-control mx-auto my-4" required />
 
                         <input style={{ backgroundColor: "#09cc84" }} type="submit" value="Sign in" className="mb-3 form-control text-light" />
+                        <p className="text-danger">{error}</p>
                     </form>
                     <p>New Here? <Link to="/SignUp" style={{ color: "#09cc84" }}>Create Account</Link></p>
 

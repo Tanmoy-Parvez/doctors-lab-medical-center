@@ -8,6 +8,8 @@ import { getAuth, updateProfile } from "firebase/auth";
 
 const SignUp = () => {
     const auth = getAuth();
+    const [errorMsg, setErrorMsg] = useState('')
+    const [error, setError] = useState('')
     // redirect page
     const history = useHistory();
     const location = useLocation();
@@ -43,6 +45,15 @@ const SignUp = () => {
     // handle user sign up 
     const handleSubmit = (e) => {
         e.preventDefault();
+
+        if (password.length < 6) {
+            setErrorMsg("Password must be at least 6 characters!");
+            return;
+        }
+        else {
+            setErrorMsg("")
+        }
+
         signUpUser(email, password, name)
             .then(() => {
                 history.push(redirect_url);
@@ -50,6 +61,9 @@ const SignUp = () => {
                 updateProfile(auth.currentUser, {
                     displayName: name,
                 })
+            })
+            .catch((error) => {
+                setError("Email already in use!");
             })
     }
 
@@ -68,6 +82,8 @@ const SignUp = () => {
                             <input onBlur={handlePassword} type="password" placeholder="Enter Your Password" className="form-control mx-auto my-4" required />
 
                             <input style={{ backgroundColor: "#09cc84" }} type="submit" value="Sign Up" className="mb-3 form-control  text-light" />
+                            <p className="text-danger">{errorMsg}</p>
+                            <p className="text-danger">{error}</p>
                         </form>
                         <p>Already have an account? <Link to="/login" style={{ color: "#09cc84" }}>Sign in</Link></p>
 
@@ -78,7 +94,7 @@ const SignUp = () => {
                     </div>
                 </div>
             </div >
-        </div >
+        </div>
     );
 };
 
