@@ -9,10 +9,10 @@ const About = () => {
     }
     return (
         <div>
-            <h1 className=" text-center">About <span className="green-text">Us</span> </h1>
+            <h1 className="text-center">About <span className="green-text">Us</span> </h1>
             <div className="row about-banner pt-5">
-                <div className="col-md-6 ps-5">
-                    <div className="ps-5">
+                <div className="col-md-6 col-12 px-5">
+                    <div className="text-area">
                         <h3 className="green-text ">
                             Who We Are?
                         </h3>
@@ -27,7 +27,7 @@ const About = () => {
                         </Link>
                     </div>
                 </div>
-                <div className="col-md-6 ps-5">
+                <div className="col-md-6 col-12 ps-5">
                     <img src={doctors} className="img-fluid w-75" alt="" />
                 </div>
             </div>

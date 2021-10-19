@@ -8,3 +8,13 @@
 .nav-item a:hover{
     color: #09cc84;
 }
+
+
+@media only screen and (max-width: 768px) {
+    .navbar-item{
+       display: flex;
+       justify-content: center;
+       align-items: center;
+    }
+}  
+    

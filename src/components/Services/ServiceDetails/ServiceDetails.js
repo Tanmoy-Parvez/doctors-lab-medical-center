@@ -13,15 +13,15 @@ const ServiceDetails = () => {
     return (
         <div className="container marginTop animate__animated animate__slideInRight">
             <div className="row d-flex align-items-center my-5">
-                <div className="col-md-6 ps-5">
+                <div className="col-md-6 col-12 px-5 mb-5">
                     <h1>{service?.title}</h1>
-                    <h5 style={myStyle}>{service?.details}</h5>
+                    <h5>{service?.details}</h5>
                     <p style={myStyle}>{service?.description}</p>
                     <Link to={"/appointment"}>
                         <button className="regular-btn mt-3 d-flex align-items-center">Appointment  <i className="fas fa-arrow-alt-circle-right fs-2 ms-2"></i></button>
                     </Link>
                 </div>
-                <div className="col-md-6 ps-5">
+                <div className="col-md-6 col-12 ps-5">
                     <img src={service?.img} alt="" className="w-75" height="300px" />
                 </div>
             </div>

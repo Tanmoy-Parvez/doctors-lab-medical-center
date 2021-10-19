@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { useHistory, useLocation } from 'react-router-dom';
 import useAuth from '../../../hooks/useAuth';
 import logo from '../../../images/logo.png';
+import './LogIn.css'
 
 
 
@@ -43,25 +44,23 @@ const LogIn = () => {
 
 
     return (
-        <div className="form text-center mt-5">
-            <div className="container py-5">
+        <div className="form-banner text-center mt-5">
+            <div className="py-5">
                 <img src={logo} alt="" className="w-25" height="120" />
-                <div className="container w-75 mt-3">
-                    <div className="bg-white w-50 mx-auto py-4 px-5 rounded-3">
-                        <form onSubmit={handleSubmit}>
-                            <input onBlur={handleEmail} type="email" placeholder="Enter Your Email" className="form-control mx-auto" required />
+                <div className="form-body mx-auto">
+                    <form onSubmit={handleSubmit}>
+                        <input onBlur={handleEmail} type="email" placeholder="Enter Your Email" className="form-control mx-auto" required />
 
-                            <input onBlur={handlePassword} type="password" placeholder="Enter Your Password" className="form-control mx-auto my-4" required />
+                        <input onBlur={handlePassword} type="password" placeholder="Enter Your Password" className="form-control mx-auto my-4" required />
 
-                            <input style={{ backgroundColor: "#09cc84" }} type="submit" value="Sign in" className="mb-3 form-control text-light" />
-                        </form>
-                        <p>New Here? <Link to="/SignUp" style={{ color: "#09cc84" }}>Create Account</Link></p>
+                        <input style={{ backgroundColor: "#09cc84" }} type="submit" value="Sign in" className="mb-3 form-control text-light" />
+                    </form>
+                    <p>New Here? <Link to="/SignUp" style={{ color: "#09cc84" }}>Create Account</Link></p>
 
-                        --------------------- or ---------------------
+                    --------------------- or ---------------------
 
-                        <button onClick={handleSignIn} className="btn btn-outline-success mt-3 form-control">
-                            <img src="https://img.icons8.com/color/48/000000/google-logo.png" alt="" width="25px" /> Google Sign In</button>
-                    </div>
+                    <button onClick={handleSignIn} className="btn btn-outline-success mt-3 form-control">
+                        <img src="https://img.icons8.com/color/48/000000/google-logo.png" alt="" width="25px" /> Google Sign In</button>
                 </div>
             </div >
         </div >

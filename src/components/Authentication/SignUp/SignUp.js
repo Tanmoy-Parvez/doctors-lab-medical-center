@@ -51,11 +51,11 @@ const SignUp = () => {
     }
 
     return (
-        <div className="form text-center mt-5">
-            <div className="container py-5">
+        <div className="form-banner text-center mt-5">
+            <div className="py-5">
                 <img src={logo} alt="" className="w-25" height="120" />
-                <div className="container w-75 mt-3">
-                    <div className="bg-white w-50 mx-auto py-4 px-5 rounded-3">
+                <div className="form-body mx-auto mt-3">
+                    <div className="mx-auto rounded-3">
                         <form onSubmit={handleSubmit}>
                             <input onBlur={handleName} type="text" placeholder="Enter Your Name" className="form-control  mx-auto mb-4" required />
 

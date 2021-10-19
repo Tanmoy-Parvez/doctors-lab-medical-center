@@ -1,0 +1,5 @@
+.doctor-card:hover{
+    background-color: rgba(132, 248, 194, 0.075);
+    border: 2px solid rgb(5, 202, 136);
+    cursor: pointer;
+}

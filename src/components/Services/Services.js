@@ -25,7 +25,7 @@ const Services = () => {
                                     </Card.Text>
                                     <div className="d-flex justify-content-center">
                                         <Link to={`/details/${service.id}`}>
-                                            <button className="regular-btn d-flex align-items-center">Details  <i className="fas fa-arrow-alt-circle-right fs-2 ms-2"></i></button>
+                                            <button className="regular-btn d-flex align-items-center ps-3 pe-1 py-1">Details  <i className="fas fa-arrow-alt-circle-right fs-2 ms-2"></i></button>
                                         </Link>
                                     </div>
                                 </Card.Body>

@@ -22,7 +22,7 @@ const Header = () => {
 
     return (
         <>
-            <Navbar className="fixed-top bg-white">
+            <Navbar collapseOnSelect expand="lg" className="fixed-top bg-white">
                 <Container>
                     <Navbar.Brand className="d-flex" href="" onClick={handleNavbarBand}>
                         <img
@@ -34,26 +34,31 @@ const Header = () => {
                         />
                         <h2 className="green-text fw-bold ms-1">Doctors Lab</h2>
                     </Navbar.Brand>
-                    <Nav className="ms-auto">
-                        <Nav.Item className="nav-item">
-                            <Nav.Link>
-                                <Link to="/home">Home</Link>
-                                <Link to="/doctors">Doctors</Link>
-                                <Link to="/contact">Contact Us</Link>
-                            </Nav.Link>
-                        </Nav.Item>
-                        {user?.email ? <Nav.Item>
-                            <span className="fw-medium ms-4">Signed in as:</span> <span className="fw-bolder green-text">{user.displayName}</span>
-                            <Button onClick={logOut} variant="danger" className="mx-3 rounded-pill px-4">Log Out</Button>
-                        </Nav.Item>
-                            :
-                            <div className="d-flex">
+                    <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                    <Navbar.Collapse id="basic-navbar-nav">
+                        <Nav className="ms-auto navbar-item">
+                            <Nav.Item className="nav-item">
+                                <Nav.Link>
+                                    <Link to="/home">Home</Link>
+                                    <Link to="/doctors">Doctors</Link>
+                                    <Link to="/contact">Contact Us</Link>
+                                </Nav.Link>
+                            </Nav.Item>
+                            {user?.email ?
+                                <Nav.Item>
+                                    <span className="fw-medium ms-4 navbar-item">Signed in as:</span> <span className="fw-bolder green-text">{user.displayName}</span>
+                                    <Button onClick={logOut} variant="danger" className="mx-3 rounded-pill px-4 ">Log Out</Button>
+                                </Nav.Item>
 
-                                <button onClick={handleLogIn} className="mx-3 regular-btn rounded-pill px-4">Sign in</button>
-                                <button onClick={handleSignUp} className="regular-btn rounded-pill px-4">Sign up</button>
-                            </div>
-                        }
-                    </Nav>
+                                :
+                                <div className="d-flex">
+
+                                    <button onClick={handleLogIn} className="mx-3 regular-btn rounded-pill px-4">Sign in</button>
+                                    <button onClick={handleSignUp} className="regular-btn rounded-pill px-4">Sign up</button>
+                                </div>
+                            }
+                        </Nav>
+                    </Navbar.Collapse>
                 </Container>
             </Navbar>
         </>

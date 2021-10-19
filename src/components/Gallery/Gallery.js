@@ -6,7 +6,7 @@ import img4 from '../../images/gallery/pic4.jpg'
 
 const Gallery = () => {
     return (
-        <div className="container text-center my-5">
+        <div className="container text-center my-5 px-3">
             <h1 className="mb-5">Our <span className="green-text">Gallery</span> </h1>
             <div className="row row-cols-1 row-cols-md-4 g-4">
                 <div className="col">
