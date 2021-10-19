@@ -11,6 +11,6 @@ Little bit description about our website:
     <li>I use firebase for user authentication</li>
     <li>I put some routes protected or private</li>
     <li>Only a logged in user is allowed to visit private routes</li>
-    <li>I use some css liba</li>
+    <li>I use some css library to make the site responsive and add some animations</li>
  </ul>
 
