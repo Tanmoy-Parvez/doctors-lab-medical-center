@@ -51,7 +51,7 @@ const useFirebase = () => {
             .finally(() => setLoading(false));
     }
 
-    // reserved auth
+    // observer
     useEffect(() => {
         const unsubscribed = onAuthStateChanged(auth, (user) => {
             if (user) {
