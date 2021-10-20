@@ -1,7 +1,9 @@
 
 /* card hover effect */
 .doctor-card:hover{
-    background-color: rgba(132, 248, 194, 0.075);
-    border: 2px solid rgb(5, 202, 136);
+    background-color: rgba(12, 14, 13, 0.966);
+    color: white;
     cursor: pointer;
+    transform:  scale(1.1) ;
+    transition: transform .5s ease-in;
 }

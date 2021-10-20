@@ -12,10 +12,39 @@ const useFirebase = () => {
     const [error, setError] = useState();
     const [isLoading, setLoading] = useState(true);
 
+
+    //sign up with email and password
+    const signUpUser = (email, password, name) => {
+        setLoading(true)
+        return createUserWithEmailAndPassword(auth, email, password, name)
+            .finally(() => setLoading(false));
+    }
+
+
+    //sign in with email & password
+    const signInUser = (email, password) => {
+        setLoading(true)
+        return signInWithEmailAndPassword(auth, email, password)
+            .finally(() => setLoading(false));
+    }
+
     // google sign in method
     const googleSignIn = () => {
         setLoading(true)
         return signInWithPopup(auth, googleProvider)
+            .catch((error) => {
+                setError(error.message);
+            })
+            .finally(() => setLoading(false));
+    }
+
+    // user log out method
+    const logOut = () => {
+        setLoading(true);
+        signOut(auth)
+            .then(() => {
+                setUser({});
+            })
             .catch((error) => {
                 setError(error.message);
             })
@@ -36,33 +65,7 @@ const useFirebase = () => {
         return () => unsubscribed;
     }, [])
 
-    // user log out method
-    const logOut = () => {
-        setLoading(true);
-        signOut(auth)
-            .then(() => {
-                setUser({});
-            })
-            .catch((error) => {
-                setError(error.message);
-            })
-            .finally(() => setLoading(false));
-    }
 
-    //sign up with email and password
-    const signUpUser = (email, password, name) => {
-        setLoading(true)
-        return createUserWithEmailAndPassword(auth, email, password)
-            .finally(() => setLoading(false));
-    }
-
-
-    //sign in with email & password
-    const signInUser = (email, password) => {
-        setLoading(true)
-        return signInWithEmailAndPassword(auth, email, password)
-            .finally(() => setLoading(false));
-    }
     // return all the functions
     return {
         googleSignIn,

@@ -8,30 +8,30 @@ const Gallery = () => {
     // gallery section
     return (
         <div className="container text-center my-5 px-3">
-            <h1 className="mb-5">Our <span className="green-text">Gallery</span> </h1>
+            <h1 className="mb-5 text-uppercase">Our <span className="green-text">Gallery</span> </h1>
             <div className="row row-cols-1 row-cols-md-4 g-4">
                 <div className="col">
-                    <div className="card h-100">
+                    <div className="card h-100 card-item bg-dark border-0 shadow-lg">
                         <img src={img1} className="card-img-top" alt="..." />
-                        <p className="text-secondary my-1">Date:12/12/2012 9.00 Am</p>
+                        <p className="text-white my-1">Date:12/12/2012 9.00 Am</p>
                     </div>
                 </div>
                 <div className="col">
-                    <div className="card h-100">
-                        <img src={img2} className="card-img-top" alt="..." />
-                        <p className="text-secondary my-1">Date:01/01/2014 10.00 Am</p>
-                    </div>
-                </div>
-                <div className="col">
-                    <div className="card h-100">
+                    <div className="card h-100 card-item bg-dark border-0 shadow-lg">
                         <img src={img3} className="card-img-top" height="170px" alt="..." />
-                        <p className="text-secondary my-1">Date:29/02/2016 11.00 Am</p>
+                        <p className="text-white my-1">Date:29/02/2016 11.00 Am</p>
                     </div>
                 </div>
                 <div className="col">
-                    <div className="card h-100">
+                    <div className="card h-100 card-item bg-dark border-0 shadow-lg">
+                        <img src={img2} className="card-img-top" alt="..." />
+                        <p className="text-white my-1">Date:01/01/2014 10.00 Am</p>
+                    </div>
+                </div>
+                <div className="col">
+                    <div className="card h-100 card-item bg-dark border-0 shadow-lg">
                         <img src={img4} className="card-img-top" height="168px" alt="..." />
-                        <p className="text-secondary my-1">Date:10/10/2020 12.00 Pm</p>
+                        <p className="text-white my-1">Date:10/10/2020 12.00 Pm</p>
                     </div>
                 </div>
             </div>

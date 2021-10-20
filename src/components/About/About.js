@@ -11,7 +11,7 @@ const About = () => {
     // About section or component
     return (
         <div>
-            <h1 className="text-center">About <span className="green-text">Us</span></h1>
+            <h1 className="text-center text-uppercase">About <span className="green-text">Us</span></h1>
             <div className="row about-banner pt-5">
                 {/* about section details info */}
                 <div className="col-md-6 col-12 px-5">

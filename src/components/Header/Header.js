@@ -52,8 +52,10 @@ const Header = () => {
                             {user?.email ?
                                 // toggle buttons
                                 <Nav.Item>
-                                    <span className="fw-medium ms-4 navbar-item">Signed in as:</span> <span className="fw-bolder green-text">{user.displayName}</span>
-                                    <Button onClick={logOut} variant="danger" className="mx-3 rounded-pill px-4 ">Log Out</Button>
+                                    <div className="navbar-item">
+                                        <span className="fw-bolder ms-3 green-text">{user.displayName}</span>
+                                        <Button onClick={logOut} variant="danger" className="mx-3 rounded-pill px-4 ">Log Out <i className="fas fa-sign-out-alt"></i></Button>
+                                    </div>
                                 </Nav.Item>
                                 :
                                 <div className="d-flex">

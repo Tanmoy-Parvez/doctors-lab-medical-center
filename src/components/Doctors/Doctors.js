@@ -10,12 +10,12 @@ const Doctors = () => {
     // doctors section
     return (
         <div className="text-center marginTop">
-            <h1 className="my-5 animate__animated animate__slideInDown">Our Expert <span className="green-text">Doctors</span> </h1>
+            <h1 className="my-5 text-uppercase animate__animated animate__slideInDown">Our Expert <span className="green-text">Doctors</span></h1>
             <div className="container">
-                <div className="row row-cols-1 row-cols-md-4 g-4 mt-3">
+                <div className="row row-cols-1 row-cols-md-4 g-4">
                     {/* card-1 */}
                     <div className="col animate__animated animate__slideInUp">
-                        <div className="card h-100 doctor-card">
+                        <div className="card h-100 doctor-card shadow-lg border-0">
                             <img src={doctor1} className="card-img-top p-2" alt="..." />
                             <div className="card-body text-center">
                                 <h5 className="card-title">Michale Hardson (Mike)</h5>
@@ -31,7 +31,7 @@ const Doctors = () => {
                     </div>
                     {/* card-2 */}
                     <div className="col animate__animated animate__slideInUp">
-                        <div className="card h-100 doctor-card">
+                        <div className="card h-100 doctor-card shadow-lg border-0">
                             <img src={doctor2} className="card-img-top p-2" alt="..." />
                             <div className="card-body text-center">
                                 <h5 className="card-title">David Cooper (Denial)</h5>
@@ -47,7 +47,7 @@ const Doctors = () => {
                     </div>
                     {/* card-3 */}
                     <div className="col animate__animated animate__slideInUp">
-                        <div className="card h-100 doctor-card">
+                        <div className="card h-100 doctor-card shadow-lg border-0">
                             <img src={doctor3} className="card-img-top p-2" alt="..." />
                             <div className="card-body text-center">
                                 <h5 className="card-title">Ema Wattson (Rose)</h5>
@@ -63,7 +63,7 @@ const Doctors = () => {
                     </div>
                     {/* card-3 */}
                     <div className="col animate__animated animate__slideInUp">
-                        <div className="card h-100 doctor-card">
+                        <div className="card h-100 doctor-card shadow-lg border-0">
                             <img src={doctor4} className="card-img-top p-2" alt="..." />
                             <div className="card-body text-center">
                                 <h5 className="card-title">Michale John Son</h5>

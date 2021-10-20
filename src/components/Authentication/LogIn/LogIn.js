@@ -47,7 +47,7 @@ const LogIn = () => {
                 history.push(redirect_url);
             })
             .catch((error) => {
-                setError("Incorrect email or password! Try again")
+                setError(<p className="bg-danger text-white px-1 py-1 animate__animated animate__heartBeat">Incorrect email or password! Try again</p>)
             })
     }
 
@@ -55,21 +55,22 @@ const LogIn = () => {
     return (
         <div className="form-banner text-center mt-5">
             <div className="py-5">
-                <img src={logo} alt="" className="w-25" height="120" />
-                <div className="form-body mx-auto">
+                <h1 className="mb-3"> <span className="text-danger">Login</span> Form</h1>
+                <div className="form-body mx-auto shadow-lg pb-4 animate__animated animate__zoomInDown">
+                    <img src={logo} alt="" className="w-75" height="120" />
                     <form onSubmit={handleSubmit}>
-                        <input onBlur={handleEmail} type="email" placeholder="Enter Your Email" className="form-control mx-auto" required />
+                        <input onBlur={handleEmail} type="email" placeholder="Enter Your Email" className="form-control px-3 mx-auto rounded-pill" required />
 
-                        <input onBlur={handlePassword} type="password" placeholder="Enter Your Password" className="form-control mx-auto my-4" required />
+                        <input onBlur={handlePassword} type="password" placeholder="Enter Your Password" className="form-control px-3 mx-auto my-4 rounded-pill" required />
+                        {error}
+                        <input style={{ backgroundColor: "#09cc84" }} type="submit" value="Sign in" className="mb-3 form-control text-light rounded-pill" />
 
-                        <input style={{ backgroundColor: "#09cc84" }} type="submit" value="Sign in" className="mb-3 form-control text-light" />
-                        <p className="text-danger">{error}</p>
                     </form>
                     <p>New Here? <Link to="/SignUp" style={{ color: "#09cc84" }}>Create Account</Link></p>
 
                     --------------------- or ---------------------
                     {/* google sign in button */}
-                    <button onClick={handleSignIn} className="btn btn-outline-success mt-3 form-control">
+                    <button onClick={handleSignIn} className="btn btn-outline-success mt-3 form-control rounded-pill">
                         <img src="https://img.icons8.com/color/48/000000/google-logo.png" alt="" width="25px" /> Google Sign In</button>
                 </div>
             </div>

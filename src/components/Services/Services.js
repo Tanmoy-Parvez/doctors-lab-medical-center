@@ -11,11 +11,11 @@ const Services = () => {
     return (
         <div className="bg-light my-5 py-5">
             <div className="text-center container">
-                <h1 className="mb-5">Our <span className="green-text">Services</span> </h1>
+                <h1 className="mb-5 text-uppercase">Our <span className="green-text">Services</span> </h1>
                 <Row xs={1} md={3} className="g-5">
                     {
                         services.map(service => <CardGroup>
-                            <Card className="rounded-3 card-item">
+                            <Card className="rounded-3 card-item shadow-lg">
                                 <Card.Img variant="top" src={service.img} height="180px" className="w-50 mx-auto p-3" />
                                 <Card.Body>
                                     <Card.Title>

@@ -63,7 +63,7 @@ const SignUp = () => {
                 })
             })
             .catch((error) => {
-                setError("Email already in use!");
+                setError(<p className="bg-danger text-white px-1 py-1 animate__animated animate__heartBeat">Email already in use!</p>);
             })
     }
 
@@ -71,25 +71,26 @@ const SignUp = () => {
     return (
         <div className="form-banner text-center mt-5">
             <div className="py-5">
-                <img src={logo} alt="" className="w-25" height="120" />
-                <div className="form-body mx-auto mt-3">
+                <h1 className="my-2"> <span className="text-danger">Sign Up</span> Form</h1>
+                <div className="form-body mx-auto mt-3 shadow-lg pb-4 animate__animated animate__zoomInDown">
+                    <img src={logo} alt="" className="w-75" height="120" />
                     <div className="mx-auto rounded-3">
                         <form onSubmit={handleSubmit}>
-                            <input onBlur={handleName} type="text" placeholder="Enter Your Name" className="form-control  mx-auto mb-4" required />
+                            <input onBlur={handleName} type="text" placeholder="Enter Your Name" className="form-control rounded-pill px-3 mx-auto mb-4" required />
 
-                            <input onBlur={handleEmail} type="email" placeholder="Enter Your Email" className="form-control mx-auto" required />
+                            <input onBlur={handleEmail} type="email" placeholder="Enter Your Email" className="form-control rounded-pill px-3 mx-auto" required />
 
-                            <input onBlur={handlePassword} type="password" placeholder="Enter Your Password" className="form-control mx-auto my-4" required />
-
-                            <input style={{ backgroundColor: "#09cc84" }} type="submit" value="Sign Up" className="mb-3 form-control  text-light" />
+                            <input onBlur={handlePassword} type="password" placeholder="Enter Your Password" className="form-control rounded-pill px-3 mx-auto my-4" required />
                             <p className="text-danger">{errorMsg}</p>
                             <p className="text-danger">{error}</p>
+                            <input style={{ backgroundColor: "#09cc84" }} type="submit" value="Sign Up" className="mb-3 form-control rounded-pill text-light" />
+
                         </form>
                         <p>Already have an account? <Link to="/login" style={{ color: "#09cc84" }}>Sign in</Link></p>
 
                         --------------------- or ---------------------
                         {/* google sign up button */}
-                        <button onClick={handleSignUp} className="btn btn-outline-success mt-3 form-control">
+                        <button onClick={handleSignUp} className="btn btn-outline-success rounded-pill mt-3 form-control">
                             <img src="https://img.icons8.com/color/48/000000/google-logo.png" alt="" width="25px" /> Google Sign Up</button>
                     </div>
                 </div>

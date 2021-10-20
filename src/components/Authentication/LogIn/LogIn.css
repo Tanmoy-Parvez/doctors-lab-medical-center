@@ -3,6 +3,7 @@
     width: 30%;
     padding: 15px 20px;
     background-color: white;
+    border-radius: 15px;
 }
 /* style for responsive */
 @media only screen and (max-width:768px) {

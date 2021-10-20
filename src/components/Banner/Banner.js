@@ -19,8 +19,8 @@ const Banner = () => {
                 {/* header details */}
                 <div className="col-md-4 col-12 text-center animate__animated animate__zoomIn">
                     <img src={logo} className="w-75" alt="" />
-                    <h2 className="text-secondary fw-normal fs-2">Professional Health Care</h2>
-                    <h2> <span className="green-text fw-bold">Doctors Lab</span> <span className="text-secondary fw-normal">Medical Center</span> </h2>
+                    <h3 className="text-secondary fw-normal text-uppercase">Professional Health Care</h3>
+                    <h3> <span className="green-text fw-bold text-uppercase">Doctors Lab</span> <span className="text-secondary fw-normal text-uppercase">Medical Center</span> </h3>
                     <p className="text-secondary fw-normal fs-5 mt-4">
                         Find the best information about living a healthier life from the trusted medical team. Trusted advice for a healthier life.
                     </p>
